@@ -4,6 +4,7 @@ ph = str(random.randint(500,900)/100)
 pao2 = str(random.randint(60,190)/10)
 paco2 = str(random.randint(30,90)/10)
 hco3 = str((random.randint(10, 35)))
+#This segment of code produces random values for each variable within the ABG
 
 print("pH = " + ph, ", pO2 = " + pao2,",pCO2 = " + paco2,", HCO3- = " + hco3)
 
@@ -23,6 +24,7 @@ if continoue.upper() == 'YES':
     student = input('WHAT IS YOUR INTERPRETATION?: ')
 else:
     quit()
+#This provides the option list of potential interpretarions of the ABG result
 
 ph = float(ph)
 paco2 = float(paco2)
@@ -61,10 +63,12 @@ else:
 print()
 info = input("WOULD YOU LIKE A BREAKDOWN OF THE ABG 'YES': ")
 print()
+#The result of the ABG are interpreted as a number which is coompared to the option selected by the user which is also a number
 
 if info.upper() != 'YES':
     quit()
-
+#The successive lines of code simply compare the variables of the ABG to defined ranges and depending on if these are true or false print the assoicated phrase 
+    
 print(result[answer - 1])
 
 if ph <= 4 and 5.5 < pco2 < 6.8:
